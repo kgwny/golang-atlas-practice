@@ -14,9 +14,20 @@ go: to add module requirements and sums:
 
 ## Atlas のセットアップ
 ```
-curl -s https://release.ariga.io/atlas/atlas-linux-amd64-latest -o atlas
+curl -sSf https://atlasgo.sh | sh
 chmod +x atlas
 mv atlas /usr/local/bin/
+```
+
+## Atlas のバージョン確認
+```
+atlas version
+```
+
+```
+$ atlas version
+atlas version v0.35.1-46f5e79-canary
+https://github.com/ariga/atlas/releases/latest
 ```
 
 ## migration ファイルの作成
@@ -72,7 +83,7 @@ atlas migrate new add_users_table
 atlas migrate hash
 ```
 
-実行すると atlas.sum というファイルが migrations/ 配下に作成される
+実行すると atlas.sum というファイルが migrations/ 配下に作成される<br>
 h1:abcdef1234567890...
 
 ## 再度 migration を実行する　
