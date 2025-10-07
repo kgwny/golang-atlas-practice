@@ -14,7 +14,8 @@ func main() {
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	fmt.Println("Running DB migrations with Atls...")
+	fmt.Println("Running DB migrations with Atlas...")
+
 	if err := cmd.Run(); err != nil {
 		log.Fatalf("migration failed: %v", err)
 	}
